@@ -52,7 +52,7 @@ func getHandlerList(handlerMap HandlerMap) string {
 
 func exitWith(err error, exitCode exit.Code) {
 	if err != nil {
-		fmt.Fprintf(os.Stderr, err.Error()+"\n")
+		fmt.Fprint(os.Stderr, err.Error()+"\n")
 	}
 	os.Exit(int(exitCode))
 }
